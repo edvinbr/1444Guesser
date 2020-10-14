@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
-	private float camMoveSpeed = 10.0f;
-	private float camZoomSpeed = 5.0f;
+	private float camMoveSpeed = 12.0f;
+	private float camZoomSpeed = 10.0f;
 	private float camSizeDefault;
 
 	void Start()
@@ -30,7 +30,7 @@ public class CameraScript : MonoBehaviour
 		}
 		float scroll = Input.GetAxis("Mouse ScrollWheel");
 		if (scroll != 0.0f) {
-			camSize = Mathf.Clamp(camSize + scroll * camZoomSpeed, 1.5f, 10.0f);
+			camSize = Mathf.Clamp(camSize + scroll * camZoomSpeed, 1.5f, 8.0f);
 			Camera.main.GetComponent<Camera>().orthographicSize = camSize;
 		}
 	}
