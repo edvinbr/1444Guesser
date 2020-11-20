@@ -63,11 +63,11 @@ public class MapHandler : MonoBehaviour
 		pos.z = transform.position.z;
 		pos = transform.InverseTransformPoint(pos);
 
-		int xPixelUnity = (Mathf.RoundToInt(pos.x * unitsToPixels) + pixelWidth / 2);
-		int yPixelUnity = (Mathf.RoundToInt(pos.y * unitsToPixels) + pixelHeight / 2);
+		int xPixelUnity = (Mathf.RoundToInt(pos.x * unitsToPixels) + pixelWidth/2);
+		int yPixelUnity = (Mathf.RoundToInt(pos.y * unitsToPixels) + pixelHeight/2);
 
-		int xPixelConverted = (Mathf.RoundToInt(pos.x * unitsToPixels) + pixelWidth / 2);
-		int yPixelConverted = (pixelHeight / 2 - Mathf.RoundToInt(pos.y * unitsToPixels));
+		int xPixelConverted = (Mathf.RoundToInt(pos.x * unitsToPixels) + pixelWidth/2);
+		int yPixelConverted = (pixelHeight/2 - Mathf.RoundToInt(pos.y * unitsToPixels));
 
 		//Debug.Log("Pixelclicked (" + xPixelConverted + ", " + yPixelConverted + ")");
 
